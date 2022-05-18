@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App<title>
-    <link rel="stylesheet" href="./styles/style.css" >
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./CSS/style.css" >
   </head>
   <body>
-    <div id="app"></div>
+    <div class="score-area">
+      <h1>Score: </h1>
+      <p id="score-board">0</p>
+    </div>
+    <div class="display-area">
+
+    </div>
+    <div class="button-row">
+      <form>
+        <input type="submit" id="rock-button" value="✊" class="button">
+        <input type="submit" id="paper-button" value="🤚" class="button">
+        <input type="submit" id="scissors-button" value="✌️" class="button">
+      </form>
+    </div>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
