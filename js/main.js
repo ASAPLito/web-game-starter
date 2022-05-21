@@ -35,10 +35,13 @@ rockButton.addEventListener("click", e => {
 	const computerChoice = computerChooseThrow();
 	if(computerChoice == "rock"){
 		draw();
+		displayRock();
 	} else if(computerChoice == "paper"){
 		lose();
+		displayPaper();
 	} else if(computerChoice == "scissors"){
 		win();
+		displayScissors();
 	}
 });
 
@@ -50,10 +53,13 @@ paperButton.addEventListener("click", e => {
 	const computerChoice = computerChooseThrow();
 	if(computerChoice == "rock"){
 		win();
+		displayRock();
 	} else if(computerChoice == "paper"){
 		draw();
+		displayPaper();
 	} else if(computerChoice == "scissors"){
 		lose();
+		displayScissors();
 	}
 });
 
@@ -65,10 +71,13 @@ scissorsButton.addEventListener("click", e => {
 	const computerChoice = computerChooseThrow();
 	if(computerChoice == "rock"){
 		lose();
+		displayRock();
 	} else if(computerChoice == "paper"){
 		win();
+		displayPaper();
 	} else if(computerChoice == "scissors"){
 		draw();
+		displayScissors();
 	}
 });
 
@@ -76,12 +85,33 @@ const draw = () => {
 
 };
 
+//The following function resets the scoreCounter variable to zero displays the new score.
 const lose = () => {
 	scoreCounter = 0;
 	document.getElementById("score-board").textContent = scoreCounter;
 };
 
+//The following function increments the scoreCounter variable and displays the new score.
 const win = () => {
 	scoreCounter++;
 	document.getElementById("score-board").textContent = scoreCounter;
 };
+
+const displayRock = () => {
+	const section = document.querySelector(".display-area");
+	section.textContent = "Computer has chosen rock!";
+};
+
+const displayPaper = () => {
+	const section = document.querySelector(".display-area");
+	section.textContent = "Computer has chosen paper!";
+};
+
+const displayScissors = () => {
+	const section = document.querySelector(".display-area");
+	section.textContent = "Computer has chosen scissors!";
+};
+
+//displayRock();
+//displayPaper();
+//displayScissors();

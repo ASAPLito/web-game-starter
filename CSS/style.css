@@ -1,14 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000500;
+}
+
 .score-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   align-items: center;
+  background-color: #f3e9dc;
 }
 
 .display-area {
   width: 100%;
-  height: 75vh;
+  height: 70vh;
+  color: white;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	font-family: Arial;
+	font-size: 400%;
+  background-color: #000500;
 }
 
 form {
@@ -16,13 +32,18 @@ form {
   flex-direction: row;
   justify-content: center;
   align-content: space-around;
+  background-color: #000500;
 }
 
 form > input {
   border-radius: 100%;
-  border-width: 0px;
-  background: none;
+  border-width: 3px;
+  border-color: #f3e9dc;
+  border-style: solid;
+  background-color: #000500;
   font-size: 400%;
+  margin: 1rem;
+  padding: 0.5rem;
   transition-timing-function: ease-in-out;
   transition: 0.2s;
 }
@@ -33,3 +54,11 @@ form > input:hover {
   transform: translateY(-2rem);
 }
 
+.selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000500;
+  color: white;
+}
