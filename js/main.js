@@ -99,17 +99,17 @@ const win = () => {
 
 const displayRock = () => {
 	const section = document.querySelector(".display-area");
-	section.textContent = "Computer has chosen rock!";
+	section.textContent = "Computer has chosen rock! ✊";
 };
 
 const displayPaper = () => {
 	const section = document.querySelector(".display-area");
-	section.textContent = "Computer has chosen paper!";
+	section.textContent = "Computer has chosen paper! 🤚";
 };
 
 const displayScissors = () => {
 	const section = document.querySelector(".display-area");
-	section.textContent = "Computer has chosen scissors!";
+	section.textContent = "Computer has chosen scissors! ✌️";
 };
 
 //displayRock();
