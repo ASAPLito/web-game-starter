@@ -52,6 +52,7 @@ form > input {
   font-size: 400%;
   margin: 1rem;
   padding: 0.5rem;
+  z-index: 2;
   transition-timing-function: ease-in-out;
   transition: 0.2s;
 }
@@ -69,4 +70,9 @@ form > input:hover {
   font-family: 'Arimo', sans-serif;
   background-color: #000500;
   color: white;
+}
+
+.win-animation {
+  transition-timing-function: ease-in-out;
+  
 }

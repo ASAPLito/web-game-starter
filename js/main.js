@@ -1,6 +1,21 @@
 //The following is a global variable used to track the player's score.
 let scoreCounter = 0;
 
+//The following block of code plays a hidden animation that is made visible
+//when the player wins the game.
+const winAnimation = document.createElement("img");
+winAnimation.src = "Assets/confetti.gif";
+winAnimation.className = "win-animation";
+winAnimation.style.position = "fixed";
+winAnimation.style.top = "0";
+winAnimation.style.left = "0";
+winAnimation.style.width = "100%";
+winAnimation.style.height = "100vh";
+winAnimation.style.objectFit = "cover";
+winAnimation.style.zIndex = "1";
+winAnimation.style.display = "none";
+document.body.append(winAnimation);
+
 /*The following function generates a random number from
 one to three and assigns it a value of either rock, paper
 or scissors.*/
@@ -86,7 +101,7 @@ const draw = () => {
 	const newLine = document.createElement("br");
 	section.append(newLine);
 	section.append("It's a draw!");
-}
+};
 
 //The following function resets the scoreCounter variable to zero displays the new score.
 const lose = () => {
@@ -106,6 +121,8 @@ const win = () => {
 	const newLine = document.createElement("br");
 	section.append(newLine);
 	section.append("You won!");
+	winAnimation.style.display = "block";
+	setTimeout(() => winAnimation.style.display = "none", 1500);
 };
 
 const displayRock = () => {
