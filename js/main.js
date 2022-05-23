@@ -34,14 +34,14 @@ rockButton.addEventListener("click", e => {
 	console.log("Rock button was pushed.");
 	const computerChoice = computerChooseThrow();
 	if(computerChoice == "rock"){
-		draw();
 		displayRock();
+		draw();
 	} else if(computerChoice == "paper"){
-		lose();
 		displayPaper();
+		lose();
 	} else if(computerChoice == "scissors"){
-		win();
 		displayScissors();
+		win();
 	}
 });
 
@@ -52,14 +52,14 @@ paperButton.addEventListener("click", e => {
 	console.log("Paper button was pushed.");
 	const computerChoice = computerChooseThrow();
 	if(computerChoice == "rock"){
-		win();
 		displayRock();
+		win();
 	} else if(computerChoice == "paper"){
-		draw();
 		displayPaper();
+		draw();
 	} else if(computerChoice == "scissors"){
-		lose();
 		displayScissors();
+		lose();
 	}
 });
 
@@ -70,48 +70,55 @@ scissorsButton.addEventListener("click", e => {
 	console.log("Scissors button was pushed.");
 	const computerChoice = computerChooseThrow();
 	if(computerChoice == "rock"){
-		lose();
 		displayRock();
+		lose();
 	} else if(computerChoice == "paper"){
-		win();
 		displayPaper();
+		win();
 	} else if(computerChoice == "scissors"){
-		draw();
 		displayScissors();
+		draw();
 	}
 });
 
 const draw = () => {
-
-};
+	const section = document.getElementById("display-area");
+	const newLine = document.createElement("br");
+	section.append(newLine);
+	section.append("It's a draw!");
+}
 
 //The following function resets the scoreCounter variable to zero displays the new score.
 const lose = () => {
 	scoreCounter = 0;
 	document.getElementById("score-board").textContent = scoreCounter;
+	const section = document.getElementById("display-area");
+	const newLine = document.createElement("br");
+	section.append(newLine);
+	section.append("You lost!");
 };
 
 //The following function increments the scoreCounter variable and displays the new score.
 const win = () => {
 	scoreCounter++;
 	document.getElementById("score-board").textContent = scoreCounter;
+	const section = document.getElementById("display-area");
+	const newLine = document.createElement("br");
+	section.append(newLine);
+	section.append("You won!");
 };
 
 const displayRock = () => {
-	const section = document.querySelector(".display-area");
+	const section = document.getElementById("display-area");
 	section.textContent = "Computer has chosen rock! ✊";
 };
 
 const displayPaper = () => {
-	const section = document.querySelector(".display-area");
+	const section = document.getElementById("display-area");
 	section.textContent = "Computer has chosen paper! 🤚";
 };
 
 const displayScissors = () => {
-	const section = document.querySelector(".display-area");
+	const section = document.getElementById("display-area");
 	section.textContent = "Computer has chosen scissors! ✌️";
 };
-
-//displayRock();
-//displayPaper();
-//displayScissors();
