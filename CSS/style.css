@@ -8,17 +8,15 @@ body {
 
 .score-area {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
   background-color: #f3e9dc;
   font-family: 'Arimo', sans-serif;
   font-size: 200%;
-}
-
-#score-board {
-
+  padding-bottom: 0;
+  line-height: 0;
 }
 
 #display-area {
@@ -77,9 +75,9 @@ form > input:hover {
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
+  0% {opacity: 0;}
 
-  75% {opacity:1;}
+  75% {opacity: 1;}
 
-  100% {opacity:0;}
+  100% {opacity: 0;}
 }

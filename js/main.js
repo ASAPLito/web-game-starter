@@ -16,14 +16,13 @@ winAnimation.style.zIndex = "1";
 winAnimation.style.display = "none";
 document.body.append(winAnimation);
 
-/*The following function generates a random number from
-one to three and assigns it a value of either rock, paper
-or scissors.*/
-
 const generateNumber = () => {
 	return Math.floor(Math.random() * 3);
 };
 
+/*The following function generates a random number from
+one to three and assigns it a value of either rock, paper
+or scissors.*/
 const computerChooseThrow = () => {
 	const numberKey = generateNumber();
 	//The following line is for testing that the random number generation worked.
